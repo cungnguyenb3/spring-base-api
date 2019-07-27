@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
-import vn.com.minori.api.request.UserDeleteRequest;
-import vn.com.minori.api.request.UserGetIdRequest;
-import vn.com.minori.api.request.UserInsertRequest;
-import vn.com.minori.api.request.UserUpdateRequest;
+import vn.com.minori.api.request.*;
 import vn.com.minori.common.common.CommonConstants;
 import vn.com.minori.common.common.CommonFunction;
 import vn.com.minori.common.common.ScreenMessageConstants;
@@ -99,4 +96,16 @@ public class UserController {
             return CommonFunction.failureOutput();
         }
     }
+
+//    @RequestMapping(value = CommonConstants.API_URL_CONST.SEARCH, method = RequestMethod.GET)
+//    public BaseOutput search(@RequestBody UserSearchRequest request){
+//        try {
+//            BaseOutput response = userService.search(request.getKeyword());
+//            return response;
+//        }
+//        catch (Exception e) {
+//            logger.trace(ScreenMessageConstants.FAILURE, e);
+//            return CommonFunction.failureOutput();
+//        }
+//    }
 }

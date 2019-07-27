@@ -12,4 +12,5 @@ public interface UserService {
     BaseOutput insert(UserDTO userDTO);
     BaseOutput update(UserUpdateDTO userUpdateDTO);
     BaseOutput delete(String userId);
+//    BaseOutput search(String keyword);
 }

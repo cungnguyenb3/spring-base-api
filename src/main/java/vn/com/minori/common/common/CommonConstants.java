@@ -27,6 +27,7 @@ public class CommonConstants {
         String INSERT = "/insert";
         String UPDATE = "/update";
         String DELETE = "/delete";
+        String SEARCH = "/search";
 
         // user controller
         String USER_ROOT = "/user";

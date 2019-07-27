@@ -15,6 +15,7 @@ import vn.com.minori.common.output.BaseOutput;
 import vn.com.minori.exception.ResourceNotFoundException;
 import vn.com.minori.repository.user.UserRepository;
 import vn.com.minori.domain.User;
+import vn.com.minori.repository.user.UserRepositoryCustom;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +27,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+//    @Autowired
+//    UserRepositoryCustom userRepositoryCustom;
 
     @Override
     public BaseOutput getAll() {
@@ -72,7 +76,9 @@ public class UserServiceImpl implements UserService {
             logger.trace(ScreenMessageConstants.FAILURE, e);
             return CommonFunction.failureOutput();
         }
+
     }
+
 
     @Override
     public BaseOutput update(UserUpdateDTO userUpdateDTO) {
@@ -104,4 +110,10 @@ public class UserServiceImpl implements UserService {
         Object object = ResponseEntity.ok().build();
         return CommonFunction.successOutput(object);
     }
+
+//    @Override
+//    public BaseOutput search(String keyword) {
+//        List<Object> listUser = new ArrayList<Object>(userRepositoryCustom.search(keyword));
+//        return CommonFunction.successOutput(listUser);
+//    }
 }
