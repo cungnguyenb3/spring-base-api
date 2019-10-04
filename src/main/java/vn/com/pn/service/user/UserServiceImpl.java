@@ -14,7 +14,6 @@ import vn.com.pn.common.output.BaseOutput;
 import vn.com.pn.exception.ResourceNotFoundException;
 import vn.com.pn.repository.user.UserRepository;
 import vn.com.pn.domain.User;
-import vn.com.pn.repository.user.UserRepositoryCustom;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,9 +25,6 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
-
-    @Autowired
-    UserRepositoryCustom userRepositoryCustom;
 
     @Override
     public BaseOutput getAll() {
